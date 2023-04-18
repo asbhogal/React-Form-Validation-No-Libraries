@@ -3,7 +3,7 @@ const FormInput = (props) => {
     <div className="form-input">
         <label>{props.name}</label>
         <input
-            ref={ props.refer }
+            name={ props.name }
             placeholder={ props.placeholder } 
             />
     </div>
