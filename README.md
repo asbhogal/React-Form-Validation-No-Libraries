@@ -8,6 +8,12 @@ React Validation Form (No Libraries)
 
 A React form built from scratch which uses JavaScript to validate data inputted (ie. without React-Hook-Form or Formik.) 
 
+<strong>Features:</strong><br>
+ - .map() to return each Form Input element and respective prop data
+ - Leverages regex to check the validation of different data entry types
+ - Uses onBlur() to check and return an error message if a user has clicked on a field then clicked out of it (ie. focus change)
+<br>
+
   <strong>:nerd_face: Stacks &#38; Tools Used:</strong><br>
 <br>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="html5 logo" width="50" height="50" style="max-width:100%;"></a>
