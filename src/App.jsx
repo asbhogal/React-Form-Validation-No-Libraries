@@ -10,7 +10,7 @@ const App = () => {
     emailAddress: "",
     birthday: "",
     password: "",
-    repeatPassword: ""
+    repeatPassword: "",
   });
 
   const handleSubmit = (e) => {
@@ -39,7 +39,7 @@ const App = () => {
         <button>SUBMIT</button>
       </form>
 
-      <span>THIS FORM IS FOR FRONT-END DEMONSTRATION PURPOSES ONLY. PLEASE DO NOT ENTER IN VALID, IDENTIFIABLE DATA AS ANY INFORMATION ENTERED IS NOT ENCRYPTED</span>
+      <span className='warning-message'>THIS FORM IS FOR FRONT-END DEMONSTRATION PURPOSES ONLY. PLEASE DO NOT ENTER IN VALID, IDENTIFIABLE DATA AS ANY INFORMATION ENTERED IS NOT ENCRYPTED</span>
     </>
     
   )

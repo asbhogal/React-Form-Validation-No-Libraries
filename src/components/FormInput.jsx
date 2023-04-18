@@ -1,6 +1,6 @@
 const FormInput = (props) => {
 
-  const { id, label, onChange, ...inputProps } = props;
+  const { id, label, errorMessage, onChange, ...inputProps } = props;
 
   return (
     
@@ -10,6 +10,7 @@ const FormInput = (props) => {
             { ...inputProps }
             onChange={ onChange }
             />
+        <span className="error-message">{ errorMessage }</span>
     </div>
   )
 }
