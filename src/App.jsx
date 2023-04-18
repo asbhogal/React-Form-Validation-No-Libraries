@@ -1,23 +1,47 @@
 import { useState } from 'react';
 import './App.css'
 import FormInput from './components/FormInput';
+import inputs from './constants';
 
 const App = () => {
 
+  const [values, setValues] = useState({
+    username: "",
+    emailAddress: "",
+    birthday: "",
+    password: "",
+    repeatPassword: ""
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = new FormData(e.target);
-    console.log(Object.fromEntries(data));
+  };
+
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value })
   }
 
+  console.log(values);
+
   return (
-    <form onSubmit={ handleSubmit }>
-      <FormInput name="Username" placeholder="Username" />
-      <FormInput name="Email Address" placeholder="Email"/>
-      <FormInput name="First Name" placeholder="First Name"/>
-      <FormInput name="Last Name" placeholder="Last Name"/>
-      <button>SUBMIT</button>
-    </form>
+    <>
+      <h1>React Form Validation</h1>
+
+      <form onSubmit={ handleSubmit }>
+        { inputs.map((input) => (
+          <FormInput 
+            key={ input.id } 
+            {...input} 
+            value={ values[input.name] }
+            onChange={ onChange }
+            />
+        ))}
+        <button>SUBMIT</button>
+      </form>
+
+      <span>THIS FORM IS FOR FRONT-END DEMONSTRATION PURPOSES ONLY. PLEASE DO NOT ENTER IN VALID, IDENTIFIABLE DATA AS ANY INFORMATION ENTERED IS NOT ENCRYPTED</span>
+    </>
+    
   )
 }
 

@@ -1,20 +1,36 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    width: 400px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  border: 1px solid #969696;
+  border-radius: 8px;
+  padding: 1.2em;
+  width: calc(100% - 124px);
 }
 
 .form-input {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .form-input input {
-  padding: 5px 10px;
+  padding: 10px;
+}
+
+span {
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+  padding: 0 15px;
 }
